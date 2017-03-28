@@ -2,16 +2,28 @@
 
 <h1>Batman VS Superman</h1>
 <p>Find me in app/views/pages/batman_vs_superman.html.erb</p>
-</div>
 
-<div>
-<script>
-	$.backstretch("http://www.planwallpaper.com/static/images/batman_arkham_knight.jpg")
-</script>
-</div>
+<body>
+<section>
+	
+		<img src="http://www.planwallpaper.com/static/images/2891179-batman-arkham_knight-review_nologo_20150618.jpg">
 
-<div>
-<script>
-	$.backstretch("http://static.srcdn.com/wp-content/uploads/Superman-3D-Art.jpg")
-</script>
-</div>
+		<button type="button">
+			<a href= "<%= pages_batman_url %>"><b>Batman</b></a>
+		</button>
+
+</section>
+
+<section>
+	
+
+		<img src="http://static.srcdn.com/wp-content/uploads/Superman-3D-Art.jpg">
+		<button type="button">
+			<a href= "<%= pages_superman_url %>"><b>Superman</b></a>
+		</button>
+
+</section>
+
+<%= yield %>
+
+</body>
