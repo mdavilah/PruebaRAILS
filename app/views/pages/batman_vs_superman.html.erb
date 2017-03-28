@@ -1,5 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
 
-
+<p><%= flash[:notice_bat] %> </p>
+<p><%= flash[:notice_sup] %> </p>
 <h1>Batman VS Superman</h1>
 <p>Find me in app/views/pages/batman_vs_superman.html.erb</p>
 
@@ -8,9 +14,14 @@
 	
 		<img src="http://www.planwallpaper.com/static/images/2891179-batman-arkham_knight-review_nologo_20150618.jpg">
 
-		<button type="button">
-			<a href= "<%= pages_batman_url %>"><b>Batman</b></a>
-		</button>
+		<a href= "<%= pages_batman_url %>"><b>Batman</b>
+		</a>
+
+		<form action="<%= pages_user_vote_batman_path %>" method="POST">
+			<input name="name">
+			<input email="email">
+			<input type="submit" value="Enviar">
+		</form>
 
 </section>
 
@@ -18,12 +29,19 @@
 	
 
 		<img src="http://static.srcdn.com/wp-content/uploads/Superman-3D-Art.jpg">
-		<button type="button">
-			<a href= "<%= pages_superman_url %>"><b>Superman</b></a>
-		</button>
+
+		<a href= "<%= pages_superman_url %>"><b>Superman</b>
+		</a>
+
+		<form action="<%= pages_user_vote_superman_path %>" method="POST">
+			<input name="name">
+			<input email="email">
+			<input type="submit" value="Enviar">
+		</form>
 
 </section>
 
 <%= yield %>
 
 </body>
+</html>
